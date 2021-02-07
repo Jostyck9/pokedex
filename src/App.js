@@ -1,25 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { CardList } from "./components/card-list/card-list.component";
+
+class App extends React.Component {
+    state = {
+        pokemons: [
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pichu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+            {
+                name: "Pikachu",
+            },
+        ],
+    };
+
+    render() {
+        return (
+            <div className="App">
+                <CardList pokemons={this.state.pokemons}></CardList>
+            </div>
+        );
+    }
 }
 
 export default App;

@@ -1,0 +1,13 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333434;
+    border-radius: 20px;
+    transition: transform 0.2s ease-in;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
