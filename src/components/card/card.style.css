@@ -9,6 +9,80 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    transition: background-color 2s ease-in;
+    cursor: pointer;
+}
+
+.card.normal {
+    background-color: #333434;
+}
+
+.card.fire {
+    background-color: #b44f0b;
+}
+
+.card.water {
+    background-color: #1f5a81;
+}
+
+.card.grass {
+    background-color: #246d24;
+}
+
+.card.electric {
+    background-color: #9b9217;
+}
+
+.card.ice {
+    background-color: #1fa095;
+}
+
+.card.fighting {
+    background-color: #811f1f;
+}
+
+.card.poison {
+    background-color: #5b2b77;
+}
+
+.card.ground {
+    background-color: #9c763e;
+}
+
+.card.flying {
+    background-color: #663e86;
+}
+
+.card.psychic {
+    background-color: #811f60;
+}
+
+.card.bug {
+    background-color: #579266;
+}
+
+.card.rock {
+    background-color: #ad802d;
+}
+
+.card.ghost {
+    background-color: #4f3e5a;
+}
+
+.card.dark {
+    background-color: #443f3f;
+}
+
+.card.dragon {
+    background-color: #462fa8;
+}
+
+.card.steel {
+    background-color: #797979;
+}
+
+.card.fairy {
+    background-color: #dd96d4;
 }
 
 .card:hover {

@@ -19,8 +19,9 @@ export class Card extends Component {
     }
 
     renderPokemonCard = () => {
+        let styleClass = `card ${this.state.pokemon.types[0].type.name}`;
         return (
-            <div className="card">
+            <div className={styleClass}>
                 <div className="pokemon">
                     <img
                         src={
