@@ -6,8 +6,71 @@
     background-color: #333434;
     border-radius: 20px;
     transition: transform 0.2s ease-in;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .card:hover {
     transform: scale(1.05);
+}
+
+.card .pokemon {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    z-index: 1;
+}
+
+.card .pokemon::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    padding-bottom: 40%;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    background-color: red;
+    z-index: -1;
+}
+
+.card .pokemon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+    background-color: white;
+    z-index: -1;
+}
+
+.card img {
+    width: 100%;
+}
+
+.waiting-pokeball {
+    width: 100px;
+    height: 100px;
+    transform-origin: 50% 52%;
+    animation: fastRotation 2.5s ease-in-out infinite;
+}
+
+.card span {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+@keyframes fastRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(3600deg);
+    }
 }

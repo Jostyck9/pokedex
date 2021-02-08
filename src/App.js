@@ -3,56 +3,19 @@ import "./App.css";
 
 import { CardList } from "./components/card-list/card-list.component";
 
+import { Config } from "./config";
+
 class App extends React.Component {
     state = {
-        pokemons: [
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pichu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-            {
-                name: "Pikachu",
-            },
-        ],
+        pokemons: [],
     };
+
+    componentDidMount() {
+        fetch(`${Config.baseApi}pokemon?limit=100`)
+            .then((res) => res.json())
+            .then((data) => this.setState({ pokemons: data.results }))
+            .catch((err) => console.error(err));
+    }
 
     render() {
         return (
