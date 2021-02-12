@@ -64,8 +64,6 @@ export class Card extends Component {
     render() {
         if (this.state.isFetch === true) {
             return this.renderPokemonCard();
-        } else if (this.state.error === true) {
-            return this.renderErrorCard();
         } else {
             return this.renderWaintingCard();
         }
